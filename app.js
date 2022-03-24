@@ -18,5 +18,17 @@ btn.addEventListener('click', () => {
     numb7.innerText = Math.floor(Math.random() * 50) + 1;
     if (numb1.innerText === numb2.innerText || numb1.innerText === numb3.innerText || numb1.innerText === numb4.innerText || numb1.innerText === numb5.innerText || numb1.innerText === numb6.innerText || numb1.innerText === numb7.innerText) {
         numb1.innerText = Math.floor(Math.random() * 50) + 1;
+    } else if (numb2.innerText === numb1.innerText || numb2.innerText === numb3.innerText || numb2.innerText === numb4.innerText || numb2.innerText === numb5.innerText || numb2.innerText === numb6.innerText || numb2.innerText === numb7.innerText) {
+        numb1.innerText = Math.floor(Math.random() * 50) + 1;
+    } else if (numb3.innerText === numb2.innerText || numb3.innerText === numb1.innerText || numb3.innerText === numb4.innerText || numb3.innerText === numb5.innerText || numb3.innerText === numb6.innerText || numb3.innerText === numb7.innerText) {
+        numb1.innerText = Math.floor(Math.random() * 50) + 1;
+    } else if (numb4.innerText === numb2.innerText || numb4.innerText === numb3.innerText || numb4.innerText === numb1.innerText || numb4.innerText === numb5.innerText || numb4.innerText === numb6.innerText || numb4.innerText === numb7.innerText) {
+        numb1.innerText = Math.floor(Math.random() * 50) + 1;
+    } else if (numb5.innerText === numb2.innerText || numb5.innerText === numb3.innerText || numb5.innerText === numb4.innerText || numb5.innerText === numb1.innerText || numb5.innerText === numb6.innerText || numb5.innerText === numb7.innerText) {
+        numb1.innerText = Math.floor(Math.random() * 50) + 1;
+    } else if (numb6.innerText === numb2.innerText || numb6.innerText === numb3.innerText || numb6.innerText === numb4.innerText || numb6.innerText === numb5.innerText || numb6.innerText === numb1.innerText || numb6.innerText === numb7.innerText) {
+        numb1.innerText = Math.floor(Math.random() * 50) + 1;
+    } else if (numb7.innerText === numb2.innerText || numb7.innerText === numb3.innerText || numb7.innerText === numb4.innerText || numb7.innerText === numb5.innerText || numb7.innerText === numb6.innerText || numb7.innerText === numb1.innerText) {
+        numb1.innerText = Math.floor(Math.random() * 50) + 1;
     }
 })
