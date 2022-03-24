@@ -5,6 +5,7 @@
 }
 
 .card {
+    max-width: 1000px;
     display: block;
     margin: 0 auto;
     border: 1px solid grey;
