@@ -1,46 +1,100 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@400;500;700;800&family=Ubuntu:wght@300;400;500&display=swap');
+
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font: inherit;
+}
+
+
+
+body {
+    background: #212121;
+    font-family: 'Genos', sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .card {
     display: block;
+    max-width: 45%;
     margin: 0 auto;
     border: 1px solid grey;
     border-radius: 0.7%;
-    background: #f1f1ebde;
+    background: #535353;
 }
 
-.card-body h1{
+.card-body h1 {
     text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-block: .5em;
 }
 
 .numb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
     border: 1px solid grey;
-    border-radius: 5px;
-    text-align: center;
+    border-radius: 50%;
+    background: #1db954;
+    color: white;
+
+    margin-top: 2em;
 }
-.numb h2{
-    margin-top: 3px;
+
+.numb p {
+    font-size: 2rem;
+
 }
+
 .randomizer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 50px;
-    
+    margin-bottom: 3em;
+
+
 }
 
-#newNum{
+#newNum {
     display: block;
     margin: 0 auto;
     margin-bottom: 25px;
     width: 50%;
-    padding: 15px;
+    padding: 15px 0;
     border-radius: 5px;
-    background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-    border:0.5px solid grey;
+    background: #1db954;
+    font-weight: 500;
+    font-size: 1.5rem;
+    border: 0.5px solid grey;
+    outline: none;
+    cursor: pointer;
+}
+
+#newNum:hover {
+    color: white;
 }
