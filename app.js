@@ -1,20 +1,21 @@
-const numb1 = document.querySelector("#numb1");
-const numb2 = document.querySelector("#numb2");
-const numb3 = document.querySelector("#numb3");
-const numb4 = document.querySelector("#numb4");
-const numb5 = document.querySelector("#numb5");
-const numb6 = document.querySelector("#numb6");
-const numb7 = document.querySelector("#numb7");
-
+let randomNumber = document.querySelectorAll('.random');
 const btn = document.querySelector('#newNum');
 
 btn.addEventListener('click', () => {
-    numb1.innerText = Math.floor(Math.random() * 50) + 1;
-    numb2.innerText = Math.floor(Math.random() * 50) + 1;
-    numb3.innerText = Math.floor(Math.random() * 50) + 1;
-    numb4.innerText = Math.floor(Math.random() * 50) + 1;
-    numb5.innerText = Math.floor(Math.random() * 50) + 1;
-    numb6.innerText = Math.floor(Math.random() * 50) + 1;
-    numb7.innerText = Math.floor(Math.random() * 50) + 1;
+    let arr = [];
+    randomNumber.forEach(numb => {
+        numb.value = Math.floor(Math.random() * 50) + 1;
+        arr.push(numb.value);
+        arr.sort(function (a, b) { return a - b });
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === arr[i + 1]) {
+                arr[i + 1] = Math.floor(Math.random() * 50) + 1;
+            }
+        }
 
+    });
+    console.log(arr)
+    for (k in arr) {
+        console.log(arr[k])
+    }
 })
