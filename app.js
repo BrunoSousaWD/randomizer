@@ -2,20 +2,38 @@ let randomNumber = document.querySelectorAll('.random');
 const btn = document.querySelector('#newNum');
 
 btn.addEventListener('click', () => {
-    let arr = [];
-    randomNumber.forEach(numb => {
-        numb.value = Math.floor(Math.random() * 50) + 1;
-        arr.push(numb.value);
-        arr.sort(function (a, b) { return a - b });
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] === arr[i + 1]) {
-                arr[i + 1] = Math.floor(Math.random() * 50) + 1;
-            }
+    let arr = random();
+
+    for (let i = 0; i < randomNumber.length; i++) {
+        console.log(randomNumber[i])
+        for (let j = 0; j < arr.length; j++) {
+            // randomNumber[i].innerHTML = arr[j];
         }
 
-    });
-    console.log(arr)
-    for (k in arr) {
-        console.log(arr[k])
     }
+    // arr.forEach(i => {
+    //     console.log(i);
+    // })
+
 })
+
+
+
+function random() {
+    let start = [1, 1, 1, 1, 1, 1, 1];
+    let randomN = [];
+
+    start.forEach(n => {
+        n = Math.floor(Math.random() * 49) + 1;
+        randomN.push(n);
+        randomN.sort(function (a, b) { return a - b });
+        for (let i = 0; i < randomN.length; i++) {
+            if (randomN[i] === randomN[i + 1]) {
+                randomN[i + 1] = Math.floor(Math.random() * 50) + 1;
+            }
+        }
+    })
+    // console.log(randomN);
+    return randomN;
+}
+
