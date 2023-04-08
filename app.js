@@ -2,19 +2,13 @@ let randomNumber = document.querySelectorAll('.random');
 const btn = document.querySelector('#newNum');
 
 btn.addEventListener('click', () => {
+
     let arr = random();
 
     for (let i = 0; i < randomNumber.length; i++) {
-        console.log(randomNumber[i])
-        for (let j = 0; j < arr.length; j++) {
-            // randomNumber[i].innerHTML = arr[j];
-        }
 
+        randomNumber[i].innerHTML = arr[i];
     }
-    // arr.forEach(i => {
-    //     console.log(i);
-    // })
-
 })
 
 
@@ -33,7 +27,6 @@ function random() {
             }
         }
     })
-    // console.log(randomN);
     return randomN;
 }
 
