@@ -37,7 +37,7 @@ main {
 
 .card {
     display: block;
-    max-width: 30em;
+    max-width: 45em;
     margin: 0 auto;
     border: 1px solid grey;
     border-radius: 10px;
@@ -55,7 +55,8 @@ main {
     margin-block: .5em;
 }
 
-.numb {
+.numb,
+.randomizer-numb {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +70,8 @@ main {
     margin-bottom: 1em;
 }
 
-.numb p {
+.numb p,
+.randomizer-numb p {
     font-size: 2.5rem;
 
 }
@@ -100,6 +102,27 @@ main {
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.23);
 }
 
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2em;
+    margin-inline: 2em;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 0.5px solid transparent;
+    cursor: pointer;
+}
+
 #newNum:hover {
     color: white;
+}
+
+#lotto-max {
+    display: none;
 }

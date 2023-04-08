@@ -30,3 +30,26 @@ function random() {
     return randomN;
 }
 
+
+
+let val = document.querySelectorAll('.btn');
+
+
+val.forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        let rCard = document.getElementById('randomizer-card');
+        var element = document.createElement('div');
+        var p = document.createElement('p');
+        element.classList.add('randomizer-numb');
+        p.innerHTML = '*';
+        p.classList.add('random');
+        element.appendChild(p);
+
+
+        rCard.appendChild(element);
+
+
+    })
+})
