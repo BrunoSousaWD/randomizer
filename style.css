@@ -169,3 +169,23 @@ main {
     color: white;
     transform: scale(1.04);
 }
+
+@media screen and (max-width:600px) {
+    body {
+        height: 100vh;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    #four,
+    #six,
+    #seven {
+        gap: 0;
+    }
+}
