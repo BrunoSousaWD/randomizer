@@ -1,13 +1,62 @@
-let randomNumber = document.querySelectorAll('.random');
-const btn = document.querySelector('#newNum');
+let randomFourNumber = document.querySelectorAll('.randomFour');
+let randomSixNumber = document.querySelectorAll('.randomSix');
+let randomSevenNumber = document.querySelectorAll('.randomSeven');
+let rando = document.getElementById('newNum');
 
-btn.addEventListener('click', () => {
+let four = document.getElementById('four');
+let six = document.getElementById('six');
+let seven = document.getElementById('seven');
 
+
+
+let val = document.querySelectorAll('.btn');
+val.forEach(btn => {
+    btn.addEventListener('click', () => {
+
+        if (btn.value === '4') {
+            four.style.display = 'flex';
+            six.style.display = 'none';
+            seven.style.display = 'none';
+
+            randomFourNumber.forEach(pos => {
+                pos.innerHTML = '*';
+            })
+        }
+        else if (btn.value === '6') {
+            six.style.display = 'flex';
+            four.style.display = 'none';
+            seven.style.display = 'none';
+
+            randomSixNumber.forEach(pos => {
+                pos.innerHTML = '*';
+            })
+        } else {
+            seven.style.display = 'flex';
+            six.style.display = 'none';
+            four.style.display = 'none';
+
+            randomSevenNumber.forEach(pos => {
+                pos.innerHTML = '*';
+            })
+        }
+    })
+})
+
+
+
+rando.addEventListener('click', () => {
     let arr = random();
 
-    for (let i = 0; i < randomNumber.length; i++) {
+    for (let i = 0; i < randomFourNumber.length; i++) {
+        randomFourNumber[i].innerHTML = arr[i];
+    }
 
-        randomNumber[i].innerHTML = arr[i];
+    for (let l = 0; l < randomSixNumber.length; l++) {
+        randomSixNumber[l].innerHTML = arr[l];
+    }
+
+    for (let s = 0; s < randomSevenNumber.length; s++) {
+        randomSevenNumber[s].innerHTML = arr[s];
     }
 })
 
@@ -29,27 +78,3 @@ function random() {
     })
     return randomN;
 }
-
-
-
-let val = document.querySelectorAll('.btn');
-
-
-val.forEach(btn => {
-
-    btn.addEventListener('click', () => {
-
-        let rCard = document.getElementById('randomizer-card');
-        var element = document.createElement('div');
-        var p = document.createElement('p');
-        element.classList.add('randomizer-numb');
-        p.innerHTML = '*';
-        p.classList.add('random');
-        element.appendChild(p);
-
-
-        rCard.appendChild(element);
-
-
-    })
-})
